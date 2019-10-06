@@ -1,0 +1,34 @@
+*.o
+*.d
+*System_IAR
+*System_Keil
+/build/
+/binary/
+/Full_Demo/
+*JlinkSettings.ini
+
+# Exclude FreeRTOS Cruft
+os/FreeRTOSv10.2.1/FreeRTOS/Demo
+os/FreeRTOSv10.2.1/FreeRTOS-Plus/Demo
+os/FreeRTOSv10.2.1/FreeRTOS/License
+
+# Exclude all FreeRTOS ports
+os/FreeRTOSv10.2.1/FreeRTOS/Source/portable/*
+# Apart from required compilers
+!os/FreeRTOSv10.2.1/FreeRTOS/Source/portable/GCC/
+# For each compiler exclude all ports
+os/FreeRTOSv10.2.1/FreeRTOS/Source/portable/GCC/*
+# Apart from the required ones
+!os/FreeRTOSv10.2.1/FreeRTOS/Source/portable/GCC/ARM_CM4F
+
+# Exclude all FreeRTOS+ Source
+os/FreeRTOSv10.2.1/FreeRTOS-Plus/Source/*
+# Apart from TCP for STM32F7xx on GCC
+!os/FreeRTOSv10.2.1/FreeRTOS-Plus/Source/FreeRTOS-Plus-TCP
+os/FreeRTOSv10.2.1/FreeRTOS-Plus/Source/FreeRTOS-Plus-TCP/portable/Compiler/*
+!os/FreeRTOSv10.2.1/FreeRTOS-Plus/Source/FreeRTOS-Plus-TCP/portable/Compiler/GCC
+os/FreeRTOSv10.2.1/FreeRTOS-Plus/Source/FreeRTOS-Plus-TCP/portable/NetworkInterface/*
+!os/FreeRTOSv10.2.1/FreeRTOS-Plus/Source/FreeRTOS-Plus-TCP/portable/NetworkInterface/STM32F7xx
+
+# Exclude CMSIS startup templates
+CMSIS/Device/ST/STM32F7xx/Source/
