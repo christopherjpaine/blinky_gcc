@@ -12,6 +12,9 @@ os/FreeRTOSv10.2.1/FreeRTOS/Demo
 os/FreeRTOSv10.2.1/FreeRTOS-Plus/Demo
 os/FreeRTOSv10.2.1/FreeRTOS/License
 
+# common
+Common/
+
 # Exclude all FreeRTOS ports
 os/FreeRTOSv10.2.1/FreeRTOS/Source/portable/*
 # Apart from required compilers

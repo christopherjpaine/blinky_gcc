@@ -16,7 +16,7 @@ DEBUG=1
 # Global Makefile Vars
 C_SRCS =
 ASM_SRCS =
-C_INCLUDES =
+C_INCLUDES = .
 ASM_INCLUDES =
 
 #------------------------------------------------------------------
@@ -25,13 +25,13 @@ ASM_INCLUDES =
 
 # Add modules
 -include os/os.mk
--include cmsis/cmsis.mk
+-include cpu/cmsis/cmsis.mk
+-include cpu/stmicro_HAL/st.mk
 
 # Top Level sources
 C_SRCS += \
 	main.c \
 	Blinky_Demo/main_blinky.c
-
 
 # Startup Files
 ASM_SRCS += startup_stm32f769xx.s

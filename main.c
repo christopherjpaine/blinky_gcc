@@ -42,14 +42,9 @@
 #include "task.h"
 #include "semphr.h"
 
-/* Standard demo includes - these are needed here as the tick hook function is
-defined in this file. */
-// #include "TimerDemo.h"
-// #include "QueueOverwrite.h"
-// #include "EventGroupsDemo.h"
-// #include "IntSemTest.h"
-// #include "QueueSet.h"
-// #include "TaskNotify.h"
+/* Include HAL */
+#include "stm32f769xx.h"
+#include "stm32f7xx_hal.h"
 
 /* Set mainCREATE_SIMPLE_BLINKY_DEMO_ONLY to one to run the simple blinky demo,
 or 0 to run the more comprehensive test and demo application. */
@@ -109,7 +104,7 @@ int main( void )
 
 static void prvSetupHardware( void )
 {
-	#if 0
+
 GPIO_InitTypeDef  GPIO_InitStruct;
 
 	/* Configure Flash prefetch and Instruction cache through ART accelerator. */
@@ -141,7 +136,7 @@ GPIO_InitTypeDef  GPIO_InitStruct;
 
 	/* MCO2 : Pin PC9 */
 	HAL_RCC_MCOConfig( RCC_MCO2, RCC_MCO2SOURCE_SYSCLK, RCC_MCODIV_1 );
-	#endif
+	
 }
 /*-----------------------------------------------------------*/
 
